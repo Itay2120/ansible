@@ -4,12 +4,11 @@
   become: true
   tasks:
   
-  - name: update repository index
-    dnf: 
-      update_cache: yes
-
-  - name: install httpd package
+  - name: install httpd and php package
     dnf:
-      name: httpd
+      name:
+        - httpd
+        - php
       state: latest
+      update_cache: yes
 
