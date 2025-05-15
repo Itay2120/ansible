@@ -5,6 +5,7 @@
   pre_tasks:
 
   - name: install updates (CentOS)
+    tags: always
     dnf: 
       update_only: yes
       update_cache: yes
@@ -15,6 +16,7 @@
   tasks:
 
     - name: install httpd and php package
+      tags: apache,centos,httpd
       dnf:
         name:
           - httpd
@@ -26,6 +28,7 @@
   tasks:
 
     - name: install mariadb package (CentOS)
+      tags: centos,db,mariadb
       dnf: 
         name: mariadb
         state: latest
