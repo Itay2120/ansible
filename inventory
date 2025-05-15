@@ -4,4 +4,6 @@
 [db_server]
 172.16.83.147
 
+[workstations]
+172.16.83.154
 
